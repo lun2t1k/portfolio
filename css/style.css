@@ -205,6 +205,12 @@ img {
     user-select: none;
 }
 
+@media screen and (max-width: 1154px) {
+    .main {
+        padding: 20px 0;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .section {
         flex-direction: column;
