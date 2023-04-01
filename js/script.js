@@ -4,7 +4,8 @@ $(document).ready(() => {
         margin: 0,
         loop: true,
         center: true,
-        nav: true
+        nav: true,
+        lazyLoad: true
     })
 
     $('.section-col__image img').removeClass('hidden')

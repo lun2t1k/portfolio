@@ -3,7 +3,6 @@
     --text-color-dark: #656364;
     --text-color-gray: #b3b2b1;
     --primary: #eae8e5;
-    /* --secondary: #e8e6e3; */
     --accent: #b3b2b1;
 }
 
@@ -20,7 +19,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--bg-color);
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 16px;
     line-height: 24px;
     color: var(--text-color-dark);
@@ -69,7 +68,6 @@ img {
     gap: 24px;
 }
 
-
 /* SECTION */
 .section {
     width: 100%;
@@ -94,6 +92,9 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 48px;
+    flex: 0 0 50%;
+    padding: 40px;
 }
 
 .section-col__socials {
@@ -115,7 +116,6 @@ img {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8px;
     margin-left: -5px;
 }
 
@@ -127,42 +127,21 @@ img {
 }
 
 .section-col__photo {
-    width: 100%;
-    height: 500px;
     display: flex;
+    align-items: center;
     justify-content: center;
-}
-
-.section-col__photo img {
-    position: relative;
-    object-fit: contain;
-    z-index: 1;
+    flex: 0 0 50%;
+    padding: 40px;
 }
 
 .section-col__photoWrap {
-    position: relative;
+    width: 100%;
+    height: 470px;
 }
 
-.section-col__photoWrap::after {
-    content: '';
-    position: absolute;
-    top: 11px;
-    right: -16px;
-    width: 100%;
-    height: 100%;
-    border: 3px solid var(--primary);
-    z-index: 0;
-}
-
-.section-col__photoWrap::before {
-    content: '';
-    position: absolute;
-    top: -17px;
-    left: -15px;
-    width: 100%;
-    height: 100%;
-    border: 3px solid var(--primary);
-    z-index: 0;
+.section-col__photo img {
+    object-fit: cover;
+    object-position: center -20px;
 }
 
 .section-col__image {
@@ -231,8 +210,32 @@ img {
         flex-direction: column;
     }
 
+    .section--abput {
+        flex-direction: row;
+    }
+
     .section-col {
         padding: 30px;
+    }
+
+    .section-col__about {
+        flex: 0 1 auto;
+        padding: 30px;
+    }
+
+    .section-col__photo {
+        align-items: flex-start;
+        flex: 1 0 auto;
+        padding: 30px;
+    }
+
+    .section-col__photoWrap {
+        width: 200px;
+        height: 200px;
+    }
+
+    .section-col__photo img {
+        object-position: center -10px;
     }
 
     .section-col__image {
@@ -247,6 +250,20 @@ img {
         font-size: 24px;
         line-height: 34px;
         margin-bottom: 12px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .section--abput {
+        flex-direction: column-reverse;
+    }
+
+    .section-col__about {
+        padding: 10px 30px 30px;
+    }
+
+    .section-col__photo {
+        padding: 30px 30px 10px;
     }
 }
 /* SECTION */
